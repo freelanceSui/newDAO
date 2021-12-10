@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.3.2",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "create-gitignore": "^0.1.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.3.2",
+    "@openzeppelin/truffle-upgrades": "^1.10.0",
+    "@truffle/contract": "^4.3.38",
+    "@truffle/hdwallet-provider": "^1.7.0",
+    "axios": "^0.24.0",
+    "big.js": "^6.1.1",
+    "bn.js": "^5.2.0",
+    "dotenv": "^10.0.0",
+    "ganache-core": "^2.13.2",
+    "ipfs-only-hash": "^4.0.0",
+    "truffle-contract-size": "^2.0.1",
+    "web3": "^1.6.0"
+  }
+}

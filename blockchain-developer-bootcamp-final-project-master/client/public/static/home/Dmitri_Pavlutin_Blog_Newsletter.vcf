@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION;TYPE=WORK:3.0
+FN;CHARSET=UTF-8:Dmitri Pavlutin
+N;CHARSET=UTF-8:Dmitri Pavlutin;;;;
+PROFILE:VCARD
+ADR;CHARSET=UTF-8:;;Internet;Chisinau;;MD-2000;Moldova\, Republic of
+EMAIL:dmitripavlutin@gmail.com
+ORG;CHARSET=UTF-8:Dmitri Pavlutin Blog
+URL:https://dmitripavlutin.com
+END:VCARD

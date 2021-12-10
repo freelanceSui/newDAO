@@ -1,0 +1,101 @@
+// sass
+@use "sass:color";
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../node_modules/bootstrap/scss/_variables.scss';
+
+// variables
+$complementary-color: #C92052;
+$theme-color: $teal-400; 
+$base-color: color.change($theme-color, $lightness: 85%, $alpha: 1); 
+
+// main styles
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    background-color: $base-color;
+}
+
+
+
+.bg-teal {
+    background-color: $theme-color;
+}
+
+#ikondao-responsive-nabar {
+    .nav-link {
+        font-size: 1.5rem;
+        padding: 1.5rem 1.5rem 0rem 2.5rem;
+        color: $dark;
+        &:hover{
+            color: $gray-600; 
+        }
+    }
+}
+.navbar-toggler.collapsed .navbar-toggler-icon {
+    width: 2.5rem;
+    // background-color: $complementary-color;
+}
+
+.btn.callout-button {
+    background-color: rgba(0, 0, 0, 0);
+    // color: $complementary-color;
+    color: $dark;
+    font-size: 1.5rem;
+    padding: 0rem 2.5rem;
+    background-color: $complementary-color;
+    color: $light;
+    border-color: $complementary-color;
+    // box-shadow: unset !important;
+    &:hover {
+        background-color: color.change($complementary-color, $blackness: 30%, $alpha: 1);
+        color: $gray-300;
+    }
+    &:focus{
+        background-color: color.change($complementary-color, $lightness: 40%, $alpha: 1);
+        color: $white; 
+        box-shadow: 0 0 0.05rem 0.25rem color.change($complementary-color, $lightness: 50%, $alpha: 1) !important;
+    }
+}
+
+// overlays
+// .container-overlay {
+//     position: absolute;
+//     right: 0;
+//     height: 100%;
+//     width: 100%;
+// }
+
+// pages
+    #ikondaoNav {
+        background-color: $theme-color;
+    }
+
+    #home {
+        height: 100vh;
+        & .card {
+            border: unset !important;
+            background-color: color.change($base-color, $blackness: 30%, $alpha: 0.15); 
+    
+            > * {
+                border: unset !important;
+            }
+        }
+    }
+
+    #proposals {
+        background-color: $base-color;
+
+        .proposalItem {
+            background-color: $base-color;
+        }
+    }
+
+    #castVotes {
+        & > * {
+            margin-top: 2rem;
+        } 
+    }
+
+

@@ -1,0 +1,145 @@
+fungibleDao
+"collective of digital artists for digital art"
+
+- smart contract components 
+    - Proxy - delegate calls to the implementation contracts below
+    - IAvatar ()
+        - holds balances
+        - owns all the contracts which provide functionality to the dao (finance, governance, market e.g. the modules of the application)
+        - connects to finance module → executes the function contained in the finance module
+        - connects to governance module (minion)  → executes the functions contained in the governance module
+        - connects to staking module (minion) → executes the functions contained in the staking module
+        - connects to NFTFactory (minion) → executes the functions contained in nftFactory
+    - Governance
+        - Voting → the logic will go into a voting contract
+        - Proposals → the logic for creating proposals (this just calls the functions on the necessary contracts it relays the calls to the necessary contracts
+            - change roles
+            - system update
+            - arbitrary monetary transaction
+                - to make a transaction like this, users will have to lock their tokens as collateral
+                - collateral can be released after proposal to release collateral
+        - libraries
+            - seele
+    - Finance
+        - distribute utility tokens
+        - distribute governance tokens
+        - execute a generic transaction
+            - money from one address to another
+        - libraries
+            - exit module, gnosis zodiac (for redeeming of tokens, change it so that it can only be called by the dao)
+                - provides ragequit funciontaliity for users
+                - can also be used to change the utility token to another one
+                - 
+    - Staker
+        - handles staking
+        - handles locking
+    - FlatIconState (contains the state for the app)
+        - what state ?
+        - accounts (creator accounts, dao (reserve) accounts)
+        - NftMetadata
+            - mapping (address -> metadata )
+    - NftFactory -> OpenSea 
+        - creates nft's    
+            - returns address to nft 
+            - returns metadata to nft
+            - question ? will nft be stored on ipfs ?
+    
+    - Governance Token (ERC20, ERC20Votes, ERC20Wrapper, Pausable)
+    - Dao Utility Token (ERC20, ERC20Capped - OpenZeppelin)
+    - Non-fungible tokens (ERC721, Pausable - OpenZeppelin)
+
+
+    Ikons
+        - represented by an ikon in svg or png created by an artist
+        - it should have an ikon title
+        - it should also have a category, that can be set by the artist, choose from a list of existing categories or from a new one created by artist
+            - note a list of categories could be stored in the the smart contract
+        - artisthandle
+            - the icon should also have a handle represented buy the artist
+        - metadata
+    
+
+        - categories 
+            - should be able to type in tokenId and get category from it
+            - should be able to check wheter category exists to update category list
+            
+
+
+IkonDAO proposals
+- create members
+
+- accountability proposals  
+    - ban members
+    - slashvotes
+
+- dao proposals
+    - mint nft
+    - reward contributions
+        - reward tokens
+        - reward votes
+
+- system proposals    
+    - high priority
+        - set voting period
+        - set voting delay
+        - set tokenReward
+        - set votReward
+        - set delay for timelock
+        - change timelocker address
+
+    - low priority 
+        - set voteWeightlimit
+            - note that some mechanisms will have to be implemented with for redristibution of votes
+        - change daoTimeLocker
+        - abillity to call some proposals in batch
+            - banMembers
+        - proposal for rewarding votes to member 
+
+
+ikondao functionalities
+    - high priority 
+        - record for proposals (this can all be retrieved from interacting with the governor) (make sure functions for retrieving this kind of information is public)
+            - proposal Id
+            - member that create the proposal
+            - proposalState (information can be retrieved from the governor)
+        - counter for proposals so every new proposal is uniquenes
+        - general description tags for proposal types 
+
+        - create system, accountabilty and general proposals 
+            - uniqueness in all proposal generated  
+    
+    - low priority
+        - set pricing mechanism for nft
+        - staking
+        - layer2
+
+
+ui functionalities
+    - to do
+        - watch course video on web3react
+        - sign in with wallet
+        - proposal
+            - show proposalState
+                - period (time before deadline)
+                - % of votes (for, against, abstain)
+            
+            - who created proposal
+            - proposal type 
+                - system
+                - accountability proposal
+                - minting proposal  
+    - information needed for app
+        
+        - main page (proposal)
+            - total proposal created
+            - total proposal passed
+            - total proposal failed
+            - nft vectors
+            - non nft vectors 
+
+        - individual page info members
+            - list of proposals with most recent proposal at the top
+                - button to vote on a proposal
+                - button for executing proposal (if it is ready to be executed - can only be executed by members)
+            - button for creating proposal
+        -      

@@ -1,0 +1,180 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0x96dA5fFe802c8922d38E7279D030bCFcffbC079b",
+      "txHash": "0x204c6019856356b9c70eb2d7aee566e86f16025b8cd3d901547b85768942462c",
+      "kind": "uups"
+    },
+    {
+      "address": "0xEcA03E45E031A94bfdf9ECDC55b641B347cf458b",
+      "txHash": "0x878565b9bc6ac886609b9431cbab36507a418d6ac0387cb3affe2bbfc9b44f55",
+      "kind": "uups"
+    },
+    {
+      "address": "0x3524f113D0DE628ed51Aa123d7925Dd0bbc7DD26",
+      "txHash": "0xd875106406a043b4b7b0410808fef6784ee676b3e63579e02889522faa3a2a4d",
+      "kind": "uups"
+    },
+    {
+      "address": "0x4B9965077Fe43F54c74f67E1F56394f2c8371FA6",
+      "txHash": "0xb57f50886eaaf2a07e9a000788b7dc17f6f748c66d0ac80d678a34019cf78bb2",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "8c296e2e41ad1954966feae25cc0f2e57fee5043419a0822f46c868e1b7e833b": {
+      "address": "0x11A87fa1aD066aD072Eb97BadBe6BD682545bA2e",
+      "txHash": "0x42f2feaa07652194382ace704b3223a6d07b3bc3fc5b298e773400e344abcffb",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "../client/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../client/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:26"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../client/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:30"
+          },
+          {
+            "contract": "ERC165Upgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../client/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol:35"
+          },
+          {
+            "contract": "AccessControlUpgradeable",
+            "label": "_roles",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)253_storage)",
+            "src": "../client/@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:63"
+          },
+          {
+            "contract": "AccessControlUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../client/@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:219"
+          },
+          {
+            "contract": "AccessControlEnumerableUpgradeable",
+            "label": "_roleMembers",
+            "type": "t_mapping(t_bytes32,t_struct(AddressSet)1497_storage)",
+            "src": "../client/@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol:25"
+          },
+          {
+            "contract": "AccessControlEnumerableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../client/@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol:89"
+          },
+          {
+            "contract": "ERC721HolderUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../client/@openzeppelin/contracts-upgradeable/token/ERC721/utils/ERC721HolderUpgradeable.sol:34"
+          },
+          {
+            "contract": "IkonDAO",
+            "label": "governor",
+            "type": "t_contract(IIkonDAO)11848",
+            "src": "../client/project:/contracts/IkonDAO.sol:26"
+          },
+          {
+            "contract": "IkonDAO",
+            "label": "timelocker",
+            "type": "t_address",
+            "src": "../client/project:/contracts/IkonDAO.sol:27"
+          },
+          {
+            "contract": "IkonDAO",
+            "label": "token",
+            "type": "t_contract(IIkonDAO)11848",
+            "src": "../client/project:/contracts/IkonDAO.sol:28"
+          }
+        ],
+        "types": {
+          "t_contract(IIkonDAO)11848": {
+            "label": "contract IIkonDAO"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_bytes32,t_struct(AddressSet)1497_storage)": {
+            "label": "mapping(bytes32 => struct EnumerableSetUpgradeable.AddressSet)"
+          },
+          "t_bytes32": {
+            "label": "bytes32"
+          },
+          "t_struct(AddressSet)1497_storage": {
+            "label": "struct EnumerableSetUpgradeable.AddressSet",
+            "members": [
+              {
+                "label": "_inner",
+                "type": "t_struct(Set)1196_storage"
+              }
+            ]
+          },
+          "t_struct(Set)1196_storage": {
+            "label": "struct EnumerableSetUpgradeable.Set",
+            "members": [
+              {
+                "label": "_values",
+                "type": "t_array(t_bytes32)dyn_storage"
+              },
+              {
+                "label": "_indexes",
+                "type": "t_mapping(t_bytes32,t_uint256)"
+              }
+            ]
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)253_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)"
+          },
+          "t_struct(RoleData)253_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32"
+              }
+            ]
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    }
+  }
+}
